@@ -1,0 +1,44 @@
+.side-reader {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0px 10px rgba(0,0,0,0.2);
+  transition: right 0.3s;
+  padding: 10px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.side-reader.open {
+  right: 0;
+}
+
+.close-btn {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.chapter-list div,
+.page-list div {
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.chapter-list div:hover,
+.page-list div:hover {
+  background-color: #f0f1f2;
+}
+
+.chapter-list div.active,
+.page-list div.active {
+  background-color: #ff6740;
+  color: white;
+  font-weight: bold;
+}
